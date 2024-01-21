@@ -1,0 +1,242 @@
+﻿1>------ Build started: Project: OrderApp, Configuration: Debug Any CPU ------
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDashboard.cs(63,26,63,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(69,26,69,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(84,26,84,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(103,26,103,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(88,26,88,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(107,26,107,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(122,26,122,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(126,26,126,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(141,26,141,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(145,26,145,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(160,26,160,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_Country.cs(164,26,164,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(179,26,179,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_States.cs(199,26,199,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrderFreeProduct.cs(107,26,107,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_ErrorLog.cs(78,26,78,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_ErrorLog.cs(97,26,97,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrderProductDetails.cs(191,26,191,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(77,26,77,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(96,26,96,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(65,26,65,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(115,26,115,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(84,26,84,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(134,26,134,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(103,26,103,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(149,26,149,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(122,26,122,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(65,26,65,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(164,26,164,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(141,26,141,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(183,26,183,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(84,26,84,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUOM.cs(160,26,160,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(104,26,104,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPackingStateScheme.cs(203,26,203,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(123,26,123,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(142,26,142,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(161,26,161,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblScheme.cs(180,26,180,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(42,26,42,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(41,26,41,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDashboard.cs(34,26,34,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(61,26,61,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDashboard.cs(82,26,82,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(76,26,76,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDashboard.cs(53,26,53,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(90,26,90,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrderFreeProduct.cs(30,26,30,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(104,26,104,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_ErrorLog.cs(37,26,37,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(118,26,118,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_ErrorLog.cs(50,26,50,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrderProductDetails.cs(29,26,29,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_States.cs(134,26,134,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(43,26,43,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(46,26,46,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(43,26,43,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(62,26,62,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(67,26,67,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(77,26,77,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(62,26,62,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(81,26,81,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(92,26,92,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(95,26,95,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(58,26,58,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(111,26,111,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(70,26,70,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(77,26,77,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(84,26,84,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(129,26,129,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(92,26,92,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(98,26,98,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(144,26,144,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(106,26,106,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_Country.cs(113,26,113,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPackingStateScheme.cs(160,26,160,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(120,26,120,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblScheme.cs(135,26,135,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\Common.cs(43,30,43,32): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(35,26,35,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(67,26,67,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(104,26,104,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(132,26,132,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(147,26,147,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(161,26,161,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(175,26,175,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(189,26,189,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(203,26,203,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblDealer.cs(218,26,218,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DALBase.cs(213,26,213,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(52,26,52,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(91,26,91,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(108,26,108,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(140,26,140,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(177,26,177,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,52,42,65): warning CS0219: The variable 'totalProduct2' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,71,42,84): warning CS0219: The variable 'totalProduct3' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,90,42,103): warning CS0219: The variable 'totalProduct4' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,109,42,122): warning CS0219: The variable 'totalProduct5' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,128,42,141): warning CS0219: The variable 'totalProduct6' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,147,42,160): warning CS0219: The variable 'totalProduct7' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\RptPrintOrder.aspx.cs(42,166,42,179): warning CS0219: The variable 'totalProduct8' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(192,26,192,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(46,26,46,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(213,26,213,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(106,26,106,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(67,26,67,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(48,26,48,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(81,26,81,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUOM.cs(121,26,121,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(95,26,95,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(74,26,74,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(110,26,110,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(227,26,227,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(51,26,51,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(88,26,88,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(124,26,124,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(136,26,136,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(102,26,102,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProduct.cs(150,26,150,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(116,26,116,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(74,26,74,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(130,26,130,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(89,26,89,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(144,26,144,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(241,26,241,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(103,26,103,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(255,26,255,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblProductPacking.cs(159,26,159,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(118,26,118,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(269,26,269,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(133,26,133,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(284,26,284,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(299,26,299,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(315,26,315,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(328,26,328,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(87,26,87,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(99,26,99,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(341,26,341,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(111,26,111,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(130,26,130,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(358,26,358,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(149,26,149,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(168,26,168,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(374,26,374,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(187,26,187,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(389,26,389,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(202,26,202,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(221,26,221,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(403,26,403,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblDealer.cs(236,26,236,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(247,26,247,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(259,26,259,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(278,26,278,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(297,26,297,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(316,26,316,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(440,26,440,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(97,26,97,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(335,26,335,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(116,26,116,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(354,26,354,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(135,26,135,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(373,26,373,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(154,26,154,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(392,26,392,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(173,26,173,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(411,26,411,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(192,26,192,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(475,27,475,29): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(430,26,430,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(212,26,212,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(450,26,450,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProduct.cs(231,26,231,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(469,26,469,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(488,26,488,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(506,26,506,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(524,26,524,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(544,26,544,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(511,27,511,29): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(563,26,563,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(583,26,583,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(602,26,602,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(615,26,615,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(627,26,627,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(650,26,650,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(547,27,547,29): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(662,26,662,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(147,26,147,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(674,26,674,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(686,26,686,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(162,26,162,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(706,26,706,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblOrder.cs(718,26,718,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(184,26,184,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(586,26,586,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblUser.cs(197,26,197,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(110,26,110,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(627,27,627,29): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(129,26,129,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(148,26,148,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(643,26,643,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(167,26,167,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(186,26,186,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(205,26,205,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(224,26,224,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(245,26,245,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(264,26,264,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\DA\DA_tblOrder.cs(677,26,677,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblUser.cs(284,26,284,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(105,26,105,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(124,26,124,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(143,26,143,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(162,26,162,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(181,26,181,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(200,26,200,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(220,26,220,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\App_Code\BA\BA_tblProductPacking.cs(239,26,239,28): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(373,13,373,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(398,13,398,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(332,13,332,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(357,13,357,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(322,13,322,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(347,13,347,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(385,38,385,40): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(417,38,417,40): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(446,38,446,40): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(466,38,466,40): warning CS0168: The variable 'ex' is declared but never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(558,13,558,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(563,25,563,32): warning CS0219: The variable 'totalkg' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(582,13,582,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(591,13,591,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddOrder.aspx.cs(610,13,610,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(615,13,615,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\AddDealerOrderScheme.aspx.cs(643,13,643,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(675,13,675,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(699,13,699,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\FreeOrder.aspx.cs(727,13,727,19): warning CS0162: Unreachable code detected
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\Configuration\ApisController.cs(1363,25,1363,32): warning CS0219: The variable 'totalkg' is assigned but its value is never used
+1>D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\Configuration\ApisController.cs(1896,30,1896,32): warning CS0168: The variable 'ex' is declared but never used
+1>  OrderApp -> D:\Application\Euro\Euroorder\Web\V1.7\EO-103\OrderApp\bin\OrderApp.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========

@@ -1,0 +1,637 @@
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using OrderApp;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Globalization;
+using System.Linq;
+using System.Web;
+using System.Web.Script.Serialization;
+using System.Web.Script.Services;
+using System.Web.Services;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace OrderApp
+{
+    public partial class AddOrder : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!Page.IsPostBack)
+                {
+
+                    isview.Text = "0";
+                    string UserType = "";
+                    UserType = Convert.ToString(HttpContext.Current.Session["UserType"]);
+
+                    bindSale();
+                    txtOrderDate.Text = DateTime.Now.ToString("dd/MM/yyyy", new CultureInfo("en-GB"));
+                    lblTotal.Text = "0";
+                    lblTotal.Attributes.Add("readonly", "readonly");
+                    hdTotalKgCount.Value = "0";
+                    lblheading.Text = CommMessage.addOrder;
+                    if (Request.QueryString["q"] != null)
+                    {
+                        string strKey = Convert.ToString(Request.QueryString["q"]);
+                        Common cmn = new Common();
+                        strKey = cmn.Decrypt(strKey);
+
+                        Int32 OrderId = Convert.ToInt32(strKey);
+                        editorderid.Text = OrderId.ToString();
+                        lblheading.Text = CommMessage.EditOrder;
+
+                        GetOrderDetails(OrderId);
+                    }
+                    if (Request.QueryString["BackButton"] != null && Request.QueryString["BackButton"] == "N")
+                        ViewState["BackButton"] = "N";
+                    else
+                        ViewState["BackButton"] = "Y";
+
+                    if (Request.QueryString["View"] != null && Request.QueryString["View"] == "Y")
+                    {
+                        isview.Text = "1";
+                        lblheading.Text = CommMessage.viewOrder;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+        }
+
+        public void bindSale()
+        {
+            BA_tblUser ObjBA_tblUser = new BA_tblUser();
+            DataTable dt = new DataTable();
+            try
+            {
+                ObjBA_tblUser.SELECT_ALL_tblUserSalesman(ref dt);
+                drpsSalesExe.DataSource = dt;
+                drpsSalesExe.DataTextField = "UserName";
+                drpsSalesExe.DataValueField = "UserID";
+                drpsSalesExe.DataBind();
+
+
+                drpsSalesExe.Items.Insert(0, new ListItem("-- Select --", "0"));
+            }
+            catch (Exception ex)
+            {
+
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+
+        }
+
+        protected void txtDealerCodeSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (GetDealerRecord())
+                {
+                    lblErrorMessage.Text = "";
+                }
+                else
+                {
+                    lblErrorMessage.Text = CommMessage.DealerNotfound;
+                }
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+        }
+
+        protected bool GetDealerRecord()
+        {
+            try
+            {
+                BA_tblDealer ObjDealer = new BA_tblDealer();
+                DataTable dt = new DataTable();
+
+                ObjDealer.DealerCode = txtDealerCodeSearch.Text;
+                ObjDealer.GET_RECORDS_FROM_tblDealer_ByCode(ref dt);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    txtDealerCode.Text = Convert.ToString(dt.Rows[0]["DealerCode"]);
+                    txtDealerName.Text = Convert.ToString(dt.Rows[0]["DealerName"]);
+                    txtContactName.Text = Convert.ToString(dt.Rows[0]["ContactName"]);
+                    txtAddress.Text = Convert.ToString(dt.Rows[0]["Address"]);
+                    txtArea.Text = Convert.ToString(dt.Rows[0]["Area"]);
+                    txtPhoneNo.Text = Convert.ToString(dt.Rows[0]["Phone"]);
+                    txtGST.Text = Convert.ToString(dt.Rows[0]["GST"]);
+                    txtpincode.Text = Convert.ToString(dt.Rows[0]["Pincode"]);
+                    hdDelaerId.Value = Convert.ToString(dt.Rows[0]["DealerId"]);
+
+                    txtdealernamesearch.Text = Convert.ToString(dt.Rows[0]["DealerName"]);
+                    if (ViewState["StateID"] != null && Convert.ToString(ViewState["StateID"]) != "0")
+                    {
+                        ViewState["OldStateID"] = ViewState["StateID"];
+                    }
+
+                    ViewState["StateID"] = Convert.ToInt32(dt.Rows[0]["StateID"]);
+                    hdstate.Value = Convert.ToString(dt.Rows[0]["StateID"]);
+
+                    return true;
+
+                }
+                else
+                {
+                    txtDealerCode.Text = "";
+                    txtDealerName.Text = "";
+                    txtContactName.Text = "";
+                    txtAddress.Text = "";
+                    txtArea.Text = "";
+                    txtPhoneNo.Text = "";
+                    txtGST.Text = "";
+                    txtpincode.Text = "";
+                    hdDelaerId.Value = "";
+                    txtdealernamesearch.Text = "";
+                    hdstate.Value = "";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+                return false;
+            }
+        }
+
+        public decimal Caltotal(decimal totalkg, string PackingType, int ProductQty)
+        {
+            decimal totalkgcount = 0;
+            try
+            {
+                totalkgcount = (totalkg * ProductQty);
+
+                if (PackingType.ToLower() == "gram")
+                {
+                    totalkgcount = totalkgcount / 1000;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return totalkgcount;
+
+        }
+        public static decimal staticCaltotal(decimal totalkg, string PackingType, int ProductQty)
+        {
+            decimal totalkgcount = 0;
+            try
+            {
+                totalkgcount = (totalkg * ProductQty);
+
+                if (PackingType.ToLower() == "gram")
+                {
+                    totalkgcount = totalkgcount / 1000;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return totalkgcount;
+
+        }
+        public static decimal Caltotals(decimal totalkg, string PackingType, int ProductQty)
+        {
+            decimal totalkgcount = 0;
+            try
+            {
+                totalkgcount = (totalkg * ProductQty);
+
+                if (PackingType.ToLower() == "gram")
+                {
+                    totalkgcount = totalkgcount / 1000;
+                }
+            }
+            catch (Exception)
+            {
+            }
+            return totalkgcount;
+
+        }
+
+        protected void ClearData()
+        {
+            try
+            {
+                hdOrderId.Value = "";
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+        }
+
+
+
+        protected void GetOrderDetails(Int32 OrderId)
+        {
+            try
+            {
+                BA_tblOrder ObjOrder = new BA_tblOrder();
+                DataTable _dt = new DataTable();
+                ObjOrder.OrderID = Convert.ToString(OrderId);
+                ObjOrder.GET_RECORDS_FROM_tblOrderByOrderId(ref _dt);
+
+                if (_dt != null)
+                {
+                    txtOrderDate.Text = Convert.ToDateTime(Convert.ToString(_dt.Rows[0]["OrderDate"])).ToString("dd/MM/yyyy", new CultureInfo("en-GB"));
+                    drpOrderStatus.SelectedValue = Convert.ToString(_dt.Rows[0]["OrderStatus"]);
+                    txttransport.Text = Convert.ToString(_dt.Rows[0]["Transport"]);
+                    txtOther.Text = Convert.ToString(_dt.Rows[0]["Other"]);
+                    txtPOP.Text = Convert.ToString(_dt.Rows[0]["POP"]);
+                    txtsitedelivery.Text = Convert.ToString(_dt.Rows[0]["SiteDelivery"]);
+                    //txtFromScheme.Text = Convert.ToInt32(_dt.Rows[0]["FreeSchemeFrom"]).ToString();
+                    //txtToScheme.Text = Convert.ToInt32(_dt.Rows[0]["FreeSchemeTO"]).ToString();
+                    lblTotal.Text = Convert.ToString(Convert.ToDecimal(_dt.Rows[0]["TotalKgGm"]));
+                    hdTotalKgCount.Value = Convert.ToString(_dt.Rows[0]["TotalKgGm"]);
+                    hdEditOrderId.Value = Convert.ToString(_dt.Rows[0]["OrderId"]);
+
+
+                    drpsSalesExe.SelectedValue = Convert.ToString(_dt.Rows[0]["SalesManId"]);
+
+
+                    txtDealerCode.Text = Convert.ToString(_dt.Rows[0]["DealerCode"]);
+                    txtdealernamesearch.Text = Convert.ToString(_dt.Rows[0]["DealerName"]);
+                    txtDealerCodeSearch.Text = Convert.ToString(_dt.Rows[0]["DealerCode"]);
+                    txtContactName.Text = Convert.ToString(_dt.Rows[0]["ContactName"]);
+                    txtDealerName.Text = Convert.ToString(_dt.Rows[0]["DealerName"]);
+                    txtAddress.Text = Convert.ToString(_dt.Rows[0]["Address"]);
+                    txtArea.Text = Convert.ToString(_dt.Rows[0]["Area"]);
+                    txtPhoneNo.Text = Convert.ToString(_dt.Rows[0]["Phone"]);
+                    txtGST.Text = Convert.ToString(_dt.Rows[0]["GST"]);
+                    txtpincode.Text = Convert.ToString(_dt.Rows[0]["Pincode"]);
+                    hdDelaerId.Value = Convert.ToString(_dt.Rows[0]["DealerId"]);
+                    ViewState["StateID"] = Convert.ToInt32(_dt.Rows[0]["StateID"]);
+                    hdstate.Value = Convert.ToString(_dt.Rows[0]["StateID"]);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+        }
+
+        protected void btnback_Click(object sender, EventArgs e)
+        {
+            if (Convert.ToString(ViewState["BackButton"]) == "Y")
+                Response.Redirect("OrderList.aspx", false);
+            else
+                Response.Redirect("Dashboard.aspx", false);
+        }
+
+
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string GetProcustlist()
+        {
+            WSResponseObject response = new WSResponseObject();
+            try
+            {
+                DataTable dt = new DataTable();
+                BA_tblProduct objBA_tblProduct = new BA_tblProduct();
+                if (objBA_tblProduct.SELECT_ALL_tblProduct(ref dt))
+                {
+
+                }
+                string JSONString = string.Empty;
+                JSONString = JsonConvert.SerializeObject(dt);
+                return JSONString;
+
+            }
+            catch (Exception ex)
+            {
+                return "Errro :" + ex.Message;
+            }
+            return "nodata";
+        }
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string GetProductPacking(string id)
+        {
+            WSResponseObject response = new WSResponseObject();
+            try
+            {
+                DataTable dt = new DataTable();
+                BA_tblProductPacking objBA_tblProductPacking = new BA_tblProductPacking();
+                objBA_tblProductPacking.ProductID = id;
+                if (objBA_tblProductPacking.GET_RECORDS_FROM_tblProductById(ref dt))
+                {
+
+                }
+                string JSONString = string.Empty;
+                JSONString = JsonConvert.SerializeObject(dt);
+                return JSONString;
+
+            }
+            catch (Exception ex)
+            {
+                return "Errro :" + ex.Message;
+            }
+            return "nodata";
+        }
+
+      
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string SaveData(long Stateid, string data,  string OrderProductDetails)
+        {
+
+            List<OrderProductData> OrderProductDetailDatadtl = new List<OrderProductData>();
+        
+            int ReturnId = 0;
+
+            List<string> OrderProductDetails1 = new List<string>();
+            OrderProductDetails1.Add(OrderProductDetails);
+
+            string xmlOrderProductDetails = "";
+            BA_tblOrder ObjOrder = new BA_tblOrder();
+
+            ObjOrder = JsonConvert.DeserializeObject<BA_tblOrder>(data);
+            ObjOrder.OrderType = CommMessage.OrderType_Order;
+
+
+            OrderProductData OrderProductData1 = new OrderProductData();
+           
+            dynamic Jsontradelist = null;
+            if (Convert.ToString(OrderProductDetails1[0]) != "" && Convert.ToString(OrderProductDetails1[0]) != "null")
+            {
+                Jsontradelist = JArray.Parse(Convert.ToString(OrderProductDetails1[0]));
+                foreach (JToken tag in Jsontradelist)
+                {
+                    try
+                    {
+                        OrderProductData1 = new JavaScriptSerializer().Deserialize<OrderProductData>(tag.ToString());
+                        OrderProductData1.ProductCode = GetProductCode(Stateid,
+                            Convert.ToString(OrderProductData1.SchemeId), Convert.ToInt32(OrderProductData1.ProductPckID));
+                        OrderProductDetailDatadtl.Add(OrderProductData1);
+                    }
+                    catch (Exception ex)
+                    {
+
+                    }
+
+                }
+            }
+            try
+            {
+                xmlOrderProductDetails = xmlOrderProductDetail(OrderProductDetailDatadtl);
+                if (xmlOrderProductDetails != "")
+                {
+                    ObjOrder.xmlProd = xmlOrderProductDetails;
+                    ObjOrder.TotalKgGm = Convert.ToDecimal(ObjOrder.TotalKgGm);
+                    ObjOrder.CreateBy = Convert.ToInt32(HttpContext.Current.Session["UserId"]);
+
+                    ObjOrder.INSERT_tblOrderNew(ref ReturnId);
+
+                }
+                    
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+
+            return ReturnId.ToString();
+        }
+
+
+        public static string xmlOrderProductDetail(List<OrderProductData> OrderProductDatadtl)
+        {
+
+            string XML = "";
+            try
+            {
+                decimal totalkg = 0;
+                XML = "<OrderProduct>";
+                for (int i = 0; i < OrderProductDatadtl.Count; i++)
+                {
+
+                    XML += "<TABLE>";
+                    XML += "<ProductId>" + Convert.ToInt64(OrderProductDatadtl[i].ProductID) + "</ProductId>";
+                    if (OrderProductDatadtl[i].ProductPckID != "")
+                    {
+                        XML += "<ProductPckIds>" + Convert.ToInt64(OrderProductDatadtl[i].ProductPckID) + "</ProductPckIds>";
+                    }
+                    else
+                    {
+                        XML += "<ProductPckIds>" + 0 + "</ProductPckIds>";
+
+                    }
+
+                    XML += "<ProductPck>" + OrderProductDatadtl[i].ProductPck + "</ProductPck>";
+                    XML += "<PackingNos>" + Convert.ToInt32(OrderProductDatadtl[i].PackingNos) + "</PackingNos>";
+                    XML += "<PackingType>" + OrderProductDatadtl[i].PackingType + "</PackingType>";
+                    XML += "<BoxORNos>Box</BoxORNos>";
+                    XML += "<PckTotalKg>" + OrderProductDatadtl[i].PckTotalKg + "</PckTotalKg>";
+                    XML += "<ProductQty>" + Convert.ToInt32(OrderProductDatadtl[i].QTY) + "</ProductQty>";
+                    XML += "<IsScheme>" + OrderProductDatadtl[i].isscheme + "</IsScheme>";
+                    if (OrderProductDatadtl[i].isscheme == "")
+                    {
+                        XML += "<Scheme></Scheme>";
+                    }
+                    else
+                    {
+                        XML += "<Scheme>" + OrderProductDatadtl[i].Scheme + "</Scheme>";
+                    }
+                    XML += "<SchemeId>" + Convert.ToInt32(OrderProductDatadtl[i].SchemeId) + "</SchemeId>";
+                    XML += "<ProductCode>" + Convert.ToString(OrderProductDatadtl[i].ProductCode) + "</ProductCode>";
+                    XML += "<PDtlSrno>" + 0 + "</PDtlSrno>";
+                    XML += "</TABLE>";
+                    totalkg = totalkg + staticCaltotal(Convert.ToDecimal(OrderProductDatadtl[i].PckTotalKg), Convert.ToString(OrderProductDatadtl[i].PackingType), Convert.ToInt32(OrderProductDatadtl[i].QTY));
+
+                }
+            }
+            catch (Exception ex)
+            {
+                string s = ex.Message;
+            }
+            return XML += "</OrderProduct>";
+
+
+        }
+
+
+        static string GetProductCode(long StateId, string SchemeID, long ProductPckID)
+        {
+            BA_tblProductPackingStateScheme ObjBA_tblProductPackingStateScheme = new BA_tblProductPackingStateScheme();
+            DataTable dt = new DataTable();
+            string productcode = "";
+            long SchemeIDINT = 0;
+            if (SchemeID == "")
+                SchemeIDINT = 0;
+            else
+                SchemeIDINT = Convert.ToInt32(SchemeID);
+
+
+            try
+            {
+
+                ObjBA_tblProductPackingStateScheme.state_id = StateId;
+                ObjBA_tblProductPackingStateScheme.SchemeIdData = SchemeIDINT;
+                ObjBA_tblProductPackingStateScheme.ProductPckID = ProductPckID;
+
+                ObjBA_tblProductPackingStateScheme.GetProductPackingStateScheme(ref dt);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    productcode = Convert.ToString(dt.Rows[0]["SchemeProductCode"]);
+                }
+            }
+            catch (Exception ex)
+            {
+                BA_ErrorLog ObjError = new BA_ErrorLog();
+                ObjError.INSERT_ErrorLog(ex);
+            }
+            return productcode;
+        }
+
+        public static string xmlOrderFreeCreate(List<OrderFreeProduct> OrderFreeProductdtl)
+        {
+            string XML = "";
+            try
+            {
+
+                XML = "<OrderFree>";
+                for (int i = 0; i < OrderFreeProductdtl.Count; i++)
+                {
+
+                    XML += "<TABLE>";
+                    XML += "<OrderSrNo>" + OrderFreeProductdtl[i].hdProdSrno + "</OrderSrNo>";
+                    XML += "<ProductId>" + Convert.ToInt64(OrderFreeProductdtl[i].item) + "</ProductId>";
+                    XML += "<AnnualPurchasQty>" + Convert.ToDecimal(OrderFreeProductdtl[i].PurchaseK) + "</AnnualPurchasQty>";
+                    XML += "<FreeSchemeFrom>" + Convert.ToDecimal(OrderFreeProductdtl[i].FromScheme) + "</FreeSchemeFrom>";
+                    XML += "<FreeSchemeTO>" + Convert.ToInt64(OrderFreeProductdtl[i].ToScheme) + "</FreeSchemeTO>";
+
+                    XML += "</TABLE>";
+
+
+                }
+            }
+            catch (Exception)
+            { }
+            return XML += "</OrderFree>";
+
+
+        }
+
+    
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string GetSelectOrderFreeProduct(string orderid)
+        {
+            WSResponseObject response = new WSResponseObject();
+            try
+            {
+                DataTable dt = new DataTable();
+                BA_tblOrderFreeProduct objBA_tblOrderFreeProduct = new BA_tblOrderFreeProduct();
+                objBA_tblOrderFreeProduct.OrderID = orderid;
+                if (objBA_tblOrderFreeProduct.GET_RECORDS_FROM_OrderFreeProduct_to_Order(ref dt))
+                {
+                }
+                string JSONString = string.Empty;
+                JSONString = JsonConvert.SerializeObject(dt);
+                return JSONString;
+
+            }
+            catch (Exception ex)
+            {
+                return "Errro :" + ex.Message;
+            }
+            return "nodata";
+        }
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string GetOrderProductDetails(string orderid)
+        {
+            WSResponseObject response = new WSResponseObject();
+            try
+            {
+                DataTable dt = new DataTable();
+                BA_tblOrderProductDetails objBA_tblOrderProductDetails = new BA_tblOrderProductDetails();
+                objBA_tblOrderProductDetails.OrderID = Convert.ToInt32(orderid);
+                if (objBA_tblOrderProductDetails.GET_RECORDS_FROM_OrderProductDetails_to_Order(ref dt))
+                {
+                }
+                string JSONString = string.Empty;
+                JSONString = JsonConvert.SerializeObject(dt);
+                return JSONString;
+
+            }
+            catch (Exception ex)
+            {
+                return "Errro :" + ex.Message;
+            }
+            return "nodata";
+        }
+
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static string GetProductPackingScheme(long ProductPckId, long Stateid)
+        {
+            WSResponseObject response = new WSResponseObject();
+            try
+            {
+                BA_tblScheme ObjBA_tblScheme = new BA_tblScheme();
+                DataTable dt = new DataTable();
+
+                if (ObjBA_tblScheme.SELECT_ALL_tblSchemeAPI(ProductPckId, Stateid, ref dt))
+                {
+                }
+
+                string JSONString = string.Empty;
+                JSONString = JsonConvert.SerializeObject(dt);
+                return JSONString;
+
+
+            }
+            catch (Exception ex)
+            {
+                return "Errro :" + ex.Message;
+            }
+            return "nodata";
+        }
+    }
+}
+
+
+public class OrderProductData
+{
+    public string ProductID { get; set; }
+    public string ProductPckID { get; set; }
+
+    public string ProductPck { get; set; }
+
+    public string PackingNos { get; set; }
+    public string PackingType { get; set; }
+    public string PckTotalKg { get; set; }
+
+    public string QTY { get; set; }
+
+    public string Scheme { get; set; }
+    public string ProductCode { get; set; }
+    public string TotalKg { get; set; }
+
+    public long SchemeId { get; set; }
+
+    public string isscheme { get; set; }
+
+}

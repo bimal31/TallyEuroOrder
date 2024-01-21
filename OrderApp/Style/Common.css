@@ -1,0 +1,148 @@
+﻿.grdContent
+        {
+            width: 80%;
+            border: solid 2px black;
+            min-width: 80%;
+        }
+
+        .header
+        {
+            background-color: #646464;
+            font-family: Arial;
+            color: White;
+            border: none 0px transparent;
+            height: 25px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .rows
+        {
+            background-color: #fff;
+            font-family: Arial;
+            font-size: 14px;
+            color: #000;
+            min-height: 25px;
+            text-align: left;
+            border: none 0px transparent;
+        }
+
+            .rows:hover
+            {
+                background-color: #ff8000;
+                font-family: Arial;
+                color: #fff;
+                text-align: left;
+            }
+
+        .selectedrow
+        {
+            background-color: #ff8000;
+            font-family: Arial;
+            color: #fff;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .mydatagrid a /** FOR THE PAGING ICONS  **/
+        {
+            background-color: Transparent;
+            padding: 5px 5px 5px 5px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .mygrdContent a:hover /** FOR THE PAGING ICONS  HOVER STYLES**/
+        {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .mygrdContent span /** FOR THE PAGING ICONS CURRENT PAGE INDICATOR **/
+        {
+            background-color: #c9c9c9;
+            color: #000;
+            padding: 5px 5px 5px 5px;
+        }
+
+        .pager
+        {
+            background-color: #646464;
+            font-family: Arial;
+            color: White;
+            height: 30px;
+            text-align: left;
+        }
+
+        .mygrdContent td
+        {
+            padding: 5px;
+        }
+
+        .mygrdContent th
+        {
+            padding: 5px;
+        }
+
+		.pagination-ys {
+    /*display: inline-block;*/
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+    background-color:grey;
+}
+
+.pagination-ys table > tbody > tr > td {
+    display: inline;
+}
+
+.pagination-ys table > tbody > tr > td > a,
+.pagination-ys table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    color: #dd4814;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    margin-left: -1px;
+}
+
+.pagination-ys table > tbody > tr > td > span {
+    position: relative;
+    float: left;
+    padding: 8px 12px;
+    line-height: 1.42857143;
+    text-decoration: none;    
+    margin-left: -1px;
+    z-index: 2;
+    color: #aea79f;
+    background-color: #f5f5f5;
+    border-color: #dddddd;
+    cursor: default;
+}
+
+.pagination-ys table > tbody > tr > td:first-child > a,
+.pagination-ys table > tbody > tr > td:first-child > span {
+    margin-left: 0;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.pagination-ys table > tbody > tr > td:last-child > a,
+.pagination-ys table > tbody > tr > td:last-child > span {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.pagination-ys table > tbody > tr > td > a:hover,
+.pagination-ys table > tbody > tr > td > span:hover,
+.pagination-ys table > tbody > tr > td > a:focus,
+.pagination-ys table > tbody > tr > td > span:focus {
+    color: #97310e;
+    background-color: #eeeeee;
+    border-color: #dddddd;
+}
+
