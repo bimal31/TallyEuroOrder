@@ -1,4 +1,5 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DealerList.aspx.cs" Inherits="OrderApp.Dealer" MasterPageFile="~/MainMaster.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DealerList.aspx.cs" Inherits="OrderApp.Dealer" 
+    MasterPageFile="~/MainMaster.Master" EnableEventValidation="false" %>
 
 <%--<!DOCTYPE html>--%>
 
@@ -55,33 +56,41 @@
                             <label>Search:</label>
                         </div>
                         <div class="col-md-5">
-                            <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" OnTextChanged="chkDealerCode_CheckedChanged" AutoPostBack="true"></asp:TextBox>
+                            <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control" 
+                                OnTextChanged="chkDealerCode_CheckedChanged" AutoPostBack="true"></asp:TextBox>
+                        </div>
+
+                         <div class="col-md-1">
+                            <asp:Button ID="btnExport" runat="server" CssClass="btn btn-inverse" Text="Export To Excel" OnClick="ExportToExcelDealer" />
                         </div>
                     </div>
                 </div>
             </div>
+            <%----%>
             <div class="col-md-12">
                 <div class="form-group table-responsive">
-                    <asp:GridView ID="grdDealerList" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No records Found"
+                    <asp:GridView ID="grdDealerList" runat="server" ShowHeaderWhenEmpty="True" EmptyDataText="No records Found" Width="100%"
                         CssClass="mygrdContent" PagerStyle-CssClass="pager" HeaderStyle-CssClass="header" RowStyle-CssClass="rows" AutoGenerateColumns="false"
-                        OnRowCommand="grdDealerList_RowCommand" AllowPaging="true" OnPageIndexChanging="grdDealerList_PageIndexChanging" PageSize="20" AllowSorting="true"
-                    OnSorting="grdDealerList_Sorting">
+                         AllowPaging="true" OnRowCommand="grdDealerList_RowCommand" 
+                         OnPageIndexChanging="grdDealerList_PageIndexChanging" PageSize="20">
+
                         <Columns>
-                            <asp:BoundField DataField="DealerCode" HeaderText="Code"  HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="DealerCode" />
-                            <asp:BoundField DataField="DealerName" HeaderText="Name"  HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="DealerName"/>
-                            <asp:BoundField DataField="ContactName" HeaderText="Contact Name"   HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="ContactName"/>
-                            <asp:BoundField DataField="Address" HeaderText="Address"  HeaderStyle-ForeColor="White" ItemStyle-Width="20%" SortExpression="Address"/>
-                            <asp:BoundField DataField="Area" HeaderText="Area"  HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="Area"/>
-                            <asp:BoundField DataField="GST" HeaderText="GST"  HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="GST"/>
-                            <asp:BoundField DataField="Phone" HeaderText="Phone No"  HeaderStyle-ForeColor="White" ItemStyle-Width="10%" SortExpression="Phone"/>
+                            <asp:BoundField DataField="SrNo" HeaderText="Srno" />
+                            <asp:BoundField DataField="DealerCode" HeaderText="Code" />
+                            <asp:BoundField DataField="DealerName" HeaderText="Name" />
+                            <asp:BoundField DataField="ContactName" HeaderText="Contact Name" />
+                            <asp:BoundField DataField="Address" HeaderText="Address" />
+                            <asp:BoundField DataField="Area" HeaderText="Area" />
+                            <asp:BoundField DataField="GST" HeaderText="GST" />
+                            <asp:BoundField DataField="Phone" HeaderText="Phone No" />
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-success pull-right" ItemStyle-Width="10%"  CommandName="EditValue" CommandArgument='<%# Eval("DealerId") %>' />
+                                    <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-success pull-right" CommandName="EditValue" CommandArgument='<%# Eval("DealerId") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
                             <asp:TemplateField>
                                 <ItemTemplate>
-                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-warning pull-right" ItemStyle-Width="10%"  CommandName="DeleteValue" CommandArgument='<%# Eval("DealerId") %>' />
+                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-warning pull-right" CommandName="DeleteValue" CommandArgument='<%# Eval("DealerId") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

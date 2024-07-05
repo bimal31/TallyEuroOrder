@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -16,7 +17,7 @@ namespace OrderApp
 
                 if (Session["UserName"] == null)
                 {
-                    Response.Redirect("Login.aspx");
+                    Response.Redirect("Login.aspx",false);
                 }
                 else
                 {
@@ -35,12 +36,17 @@ namespace OrderApp
                             liDealer.Visible = false;
                             liProductPacking.Visible = false;
                             liProduct.Visible = false;
-                            liState.Visible = false;
+                            liProductPacking.Visible = false;
+                            liProduct.Visible = false;
                             liState.Visible = false;
                             liScheme.Visible = false;
+                            ///liUser.Visible = false;
                         }
                     }
                 }
+            }
+            catch (ThreadAbortException ex)
+            {
             }
             catch (Exception ex)
             {

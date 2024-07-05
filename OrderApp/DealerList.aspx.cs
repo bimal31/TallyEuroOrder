@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -16,7 +17,7 @@ namespace OrderApp
             {
                 if (!Page.IsPostBack)
                 {
-                    txtSearch.Attributes.Add("Placeholder", "Search by DealerName OR ContactName");
+                    txtSearch.Attributes.Add("Placeholder", "Search by Dealer details");
                     GetdealerList();
                 }
             }
@@ -102,7 +103,8 @@ namespace OrderApp
                 objUser.DealerName = txtSearch.Text;
                 objUser.SELECT_ALL_tblDealer(ref dt);
 
-             
+                Session["dtDealer"] = dt;
+
                 grdDealerList.DataSource = dt;
                 grdDealerList.DataBind();
 
@@ -168,6 +170,29 @@ namespace OrderApp
             {
                 BA_ErrorLog ObjError = new BA_ErrorLog();
                 ObjError.INSERT_ErrorLog(ex);
+            }
+        }
+		
+		 protected void ExportToExcelDealer(object sender, EventArgs e)
+        {
+            Response.Clear();
+            Response.Buffer = true;
+            Response.AddHeader("content-disposition", "attachment;filename=DeakerList" + DateTime.Now.ToString("ddMMyyyyhhmmss") + ".xls");
+            Response.Charset = "";
+            Response.ContentType = "application/vnd.ms-excel";
+            using (StringWriter sw = new StringWriter())
+            {
+                HtmlTextWriter hw = new HtmlTextWriter(sw);
+
+                grdDealerList.AllowPaging = false;
+                this.GetdealerList();
+                grdDealerList.RenderControl(hw);
+                
+                string style = @"<style> .textmode { mso-number-format:\@; } </style>";
+                Response.Write(style);
+                Response.Output.Write(sw.ToString());
+                Response.Flush();
+                Response.End();
             }
         }
 

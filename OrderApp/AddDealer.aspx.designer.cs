@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace OrderApp {
-    
-    
-    public partial class AddDealer {
-        
+namespace OrderApp
+{
+
+
+    public partial class AddDealer
+    {
+
         /// <summary>
         /// btnback control.
         /// </summary>
@@ -20,7 +22,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnback;
-        
+
         /// <summary>
         /// lblErrorMessage control.
         /// </summary>
@@ -29,7 +31,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblErrorMessage;
-        
+
         /// <summary>
         /// txtDealerCode control.
         /// </summary>
@@ -38,7 +40,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDealerCode;
-        
+
         /// <summary>
         /// hdDealerId control.
         /// </summary>
@@ -47,7 +49,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hdDealerId;
-        
+
         /// <summary>
         /// txtDealerName control.
         /// </summary>
@@ -56,7 +58,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDealerName;
-        
+
         /// <summary>
         /// reqDealerName control.
         /// </summary>
@@ -65,7 +67,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDealerName;
-        
+
         /// <summary>
         /// txtcontactname control.
         /// </summary>
@@ -74,7 +76,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtcontactname;
-        
+
         /// <summary>
         /// txtPhoneNo control.
         /// </summary>
@@ -83,7 +85,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPhoneNo;
-        
+
         /// <summary>
         /// reqPhoneNo control.
         /// </summary>
@@ -92,7 +94,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPhoneNo;
-        
+
         /// <summary>
         /// txtAddress control.
         /// </summary>
@@ -101,7 +103,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
-        
+
         /// <summary>
         /// reqtAddress control.
         /// </summary>
@@ -110,7 +112,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqtAddress;
-        
+
         /// <summary>
         /// drpStateName control.
         /// </summary>
@@ -119,7 +121,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList drpStateName;
-        
+
         /// <summary>
         /// txtArea control.
         /// </summary>
@@ -128,7 +130,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtArea;
-        
+
         /// <summary>
         /// txtpincode control.
         /// </summary>
@@ -137,7 +139,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtpincode;
-        
+
         /// <summary>
         /// reqpincode control.
         /// </summary>
@@ -146,7 +148,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqpincode;
-        
+
         /// <summary>
         /// txtGST control.
         /// </summary>
@@ -155,7 +157,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtGST;
-        
+
         /// <summary>
         /// FileUploadGST control.
         /// </summary>
@@ -164,7 +166,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUploadGST;
-        
+
         /// <summary>
         /// imgGSTPhoto control.
         /// </summary>
@@ -173,7 +175,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgGSTPhoto;
-        
+
         /// <summary>
         /// FileUploadVisitCard control.
         /// </summary>
@@ -182,7 +184,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload FileUploadVisitCard;
-        
+
         /// <summary>
         /// imgVisitCard control.
         /// </summary>
@@ -191,7 +193,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Image imgVisitCard;
-        
+
         /// <summary>
         /// btnSubmit control.
         /// </summary>
@@ -200,7 +202,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSubmit;
-        
+
         /// <summary>
         /// btnClear control.
         /// </summary>
@@ -209,7 +211,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnClear;
-        
+
         /// <summary>
         /// hdnGSTPhoto control.
         /// </summary>
@@ -218,7 +220,7 @@ namespace OrderApp {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputHidden hdnGSTPhoto;
-        
+
         /// <summary>
         /// hdnVisitCard control.
         /// </summary>

@@ -680,5 +680,16 @@ public class DA_tblOrder : DALBase
         }
     }
 
+    public bool SELECT_ALL_tblOrder_orderstatus_Factory(BA_tblOrder objBA_tblOrder, ref DataTable dt)
+    {
+        try
+        {
 
+            return this.Get_Records("sproc_SELECT_ALL_tblOrder_orderstatus_Factory", ref dt);
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+    }
 }

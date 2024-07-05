@@ -4,15 +4,11 @@
     <link href="Style/datepicker.css" rel="stylesheet" />
     <script src="Script/jquery-1.9.1.js"></script>
     <script src="Script/bootstrap-datepicker.js"></script>
-
-    <%--<script src="Script/jquery-1.11.1.min.js"></script>--%>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:TextBox ID="editorderid" Style="display: none" runat="server"></asp:TextBox>
-
     <asp:TextBox ID="isview" Style="display: none" runat="server"></asp:TextBox>
-
     <div class="panel panel-default">
         <div class="panel-heading page-titles">
             <div class="form-group pull-left">
@@ -21,13 +17,13 @@
                 </h3>
             </div>
             <div class="form-group pull-right">
-                <asp:Button ID="btnback" runat="server" Text="Back To List" CssClass="btn btn-info btn-rounded" OnClick="btnback_Click" />
+                <asp:Button ID="btnback" runat="server"  Text="Back To List" CssClass="btn btn-info btn-rounded" OnClick="btnback_Click" />
             </div>
         </div>
 
         <center>
-            <asp:Label ID="lblErrorMessage" ForeColor="Red" runat="server"></asp:Label>
-        </center>
+            <asp:Label ID="lblErrorMessage"  ForeColor="Red"   runat="server"></asp:Label>
+         </center>
 
         <div class="panel-body">
             <div class="col-md-12">
@@ -184,11 +180,11 @@
                 <table id="tblitemScheme" class="table order-list">
                     <thead>
                         <tr>
-                            <td style="width: 200px">Product item</td>
-                            <td style="width: 200px">Purchase Kg</td>
-                            <td style="width: 200px">From Scheme</td>
-                            <td style="width: 200px">To Scheme</td>
-                            <td style="width: 200px">Total Free Kg</td>
+                            <td style="width:200px">Product item</td>
+                            <td style="width:200px">Purchase Kg</td>
+                            <td style="width:200px">From Scheme</td>
+                            <td style="width:200px">To Scheme</td>
+                            <td style="width:200px">Total Free Kg</td>
                             <td style="display: none;">sr.no</td>
                         </tr>
                     </thead>
@@ -397,8 +393,8 @@
                 <table id="tblOrderProductDetail" class="tblOrderProductDetail table">
                     <thead>
                         <tr>
-                            <th>Package</th>
-                            <th>Nos</th>
+                            <th>PKG</th>
+                            <th>QTY</th>
                             <th></th>
                               <th>Scheme</th>
                             <th>Total Kg</th>

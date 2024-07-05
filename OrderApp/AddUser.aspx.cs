@@ -65,18 +65,14 @@ namespace OrderApp
             {
                 BA_tblUser ObjUser = new BA_tblUser();
                 Common Cmn = new Common();
-                if (hdUserId.Value != "")
-                {
-                    ObjUser.UserID = Convert.ToInt32(hdUserId.Value);
-                }
-                else
-                {
-                    ObjUser.UserID = 0;
-                }
 
-                if (!CHKUserName(ObjUser.UserID))
+                if (Validateuser())
                 {
 
+                    if (hdUserId.Value != "")
+                    {
+                        ObjUser.UserID = Convert.ToInt32(hdUserId.Value);
+                    }
                     ObjUser.UserName = txtUserName.Text;
                     ObjUser.UserType = ddlUserType1.SelectedValue;
                     ObjUser.FirstName = txtFirstName.Text;
@@ -106,7 +102,14 @@ namespace OrderApp
 
                     if (output == true)
                     {
+                        //if (hdUserId.Value != "")
+                        //{
                         Response.Redirect("UserList.aspx", false);
+                        //}
+                        //else
+                        //{
+                        //    Response.Redirect("Login.aspx", false);
+                        //}
                     }
                     else
                     {
@@ -145,14 +148,11 @@ namespace OrderApp
             }
         }
 
-       
-
-        public bool CHKUserName(int id)
+        public bool Validateuser()
         {
             try
             {
                 BA_tblUser ObjUser = new BA_tblUser();
-                ObjUser.UserID = id;
                 ObjUser.UserName = txtUserName.Text;
                 DataTable dt = new DataTable();
 
@@ -162,19 +162,30 @@ namespace OrderApp
                 {
                     if (dt.Rows.Count > 0)
                     {
-                        //txtUserName.Text = "";
+                        txtUserName.Text = "";
                         lblErrorMessage.Text = CommMessage.usernameareadyexist;
                         lblErrorMessage.ForeColor = System.Drawing.Color.Red;
+                        return false;
+                    }
+                    else
+                    {
+                        lblErrorMessage.Text = CommMessage.usernamevailable;
+                        lblErrorMessage.ForeColor = System.Drawing.Color.Green;
                         return true;
                     }
                 }
-                return false;
+                else
+                {
+                    lblErrorMessage.Text = CommMessage.usernamevailable;
+                    lblErrorMessage.ForeColor = System.Drawing.Color.Green;
+                    return true;
+                }
             }
             catch (Exception ex)
             {
                 BA_ErrorLog ObjError = new BA_ErrorLog();
                 ObjError.INSERT_ErrorLog(ex);
-                return true;
+                return false;
             }
         }
 

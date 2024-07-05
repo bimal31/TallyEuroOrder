@@ -115,7 +115,6 @@
                     AllowPaging="true" OnPageIndexChanging="grdMainOrder_PageIndexChanging" PageSize="10" OnRowCommand="grdMainOrder_RowCommand" OnRowDataBound="grdMainOrder_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="OrdSrNo" HeaderText="Order Sr No" />
-                        <asp:BoundField DataField="OrderID" HeaderText="Order Id" />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                         <asp:BoundField DataField="OrderDate" HeaderText="Order Date" /> <%--DataFormatString="{0:dd/MM/yyyy}" --%>
                         <asp:BoundField DataField="DealerName" HeaderText="Dealer Name" />
@@ -145,7 +144,6 @@
                     AllowPaging="true" OnPageIndexChanging="grdFreeOrder_PageIndexChanging" PageSize="10" OnRowCommand="grdFreeOrder_RowCommand" OnRowDataBound="grdFreeOrder_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="OrdSrNo" HeaderText="Order Sr No" />
-                        <asp:BoundField DataField="OrderID" HeaderText="Order Id" />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                         <asp:BoundField DataField="OrderDate" HeaderText="Order Date" />
                         <asp:BoundField DataField="DealerName" HeaderText="Dealer Name" />
@@ -174,7 +172,6 @@
                     AllowPaging="true" OnPageIndexChanging="grdDealerOrder_PageIndexChanging" PageSize="10" OnRowCommand="grdDealerOrder_RowCommand" OnRowDataBound="grdDealerOrder_RowDataBound">
                     <Columns>
                         <asp:BoundField DataField="OrdSrNo" HeaderText="Order Sr No" />
-                        <asp:BoundField DataField="OrderID" HeaderText="Order Id" />
                         <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                         <asp:BoundField DataField="OrderDate" HeaderText="Order Date" />
                         <asp:BoundField DataField="DealerName" HeaderText="Dealer Name" />

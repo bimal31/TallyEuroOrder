@@ -209,7 +209,7 @@ namespace OrderApp
                 //  dt = DateTime.ParseExact(date, "MM/dd/yyyy", CultureInfo.InvariantCulture);
                 //var formats = new[] { "dd-MM-yyyy" };
 
-                //  dt = DateTime.ParseExact(date.Replace("-", "/"), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
+              //  dt = DateTime.ParseExact(date.Replace("-", "/"), "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
                 dt = DateTime.ParseExact(date, "yyyy-MM-dd", System.Globalization.CultureInfo.InvariantCulture);
                 return dt;
             }
@@ -243,7 +243,7 @@ namespace OrderApp
                 objBA_tblOrder.ToDate = ToDate;
                 objBA_tblOrder.CreateBy = UserId;
 
-
+            
                 objBA_tblOrder.GET_FreeOrder_API(ref dt);
 
 
@@ -362,7 +362,7 @@ namespace OrderApp
             return response;
         }
         #endregion
-
+        
         #region Free OrderList Get
         [HttpGet]
         [Route("FreeOrderView/{OrderId}")]
@@ -541,17 +541,19 @@ namespace OrderApp
             return response;
         }
         #endregion
-
+        
         #region View Dealer
         [HttpGet]
         [Route("ViewDealer/{Dealercode}")]
         public WSResponseObject ViewDealer(string Dealercode)
         {
+            BA_ErrorLog ObjError = new BA_ErrorLog();
+            ///ObjError.INSERT_ErrorLogmessage("1");
             System.Web.Script.Serialization.JavaScriptSerializer jSearializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             WSResponseObject response = new WSResponseObject();
             BA_tblDealer ObjDealer = new BA_tblDealer();
             DataTable dt = new DataTable();
-
+           /// ObjError.INSERT_ErrorLogmessage("2");
             //var blankarray = new BA_tblDealer();
             var blankarray = new List<string>();
             response.total_records = 0;
@@ -568,10 +570,10 @@ namespace OrderApp
                 }
 
 
-
+               // ObjError.INSERT_ErrorLogmessage("3");
                 ObjDealer.DealerCode = Dealercode;
                 ObjDealer.GET_RECORDS_FROM_tblDealer_ByCode(ref dt);
-
+               // ObjError.INSERT_ErrorLogmessage("4");
                 if (dt != null && dt.Rows.Count > 0)
                 {
 
@@ -612,6 +614,8 @@ namespace OrderApp
             }
             catch (Exception ex)
             {
+
+                ObjError.INSERT_ErrorLog(ex);
                 response.status = 1;
                 response.Message = (("Error ViewDealer : " + ex.Message) ?? "");
 
@@ -1262,7 +1266,7 @@ namespace OrderApp
         [HttpPost]
         [Route("AddDealerOrderScheme")]
         public WSResponseObject AddDealerOrderScheme(AllDataOrder data)
-        {
+        {  
             int ReturnId = 0;
             string xmlOrderFreeCreates = "";
             string xmlOrderProductDetails = "";
@@ -1323,14 +1327,53 @@ namespace OrderApp
             return response;
         }
 
+
+        #region SchemeList
+        [HttpGet]
+        [Route("SchemetList")]
+        public WSResponseObject SchemetList()
+        {
+            WSResponseObject response = new WSResponseObject();
+            var blankarray = new List<string>();
+            response.total_records = 0;
+            response.Message = "";
+            try
+            {
+                DataTable dt = new DataTable();
+                BA_tblScheme objScheme = new BA_tblScheme();
+                objScheme.SELECT_ALL_tblScheme(ref dt);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    response.status = 0;
+                    response.Message = "Success";
+                    response.total_records = dt.Rows.Count;
+                    response.Data = dt;
+                }
+                else
+                {
+                    response.status = 1;
+                    response.Message = "No record found";
+                    response.Data = blankarray;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                response.status = 1;
+                response.Message = (("Error SchemetList: " + ex.Message) ?? "");
+                response.Data = blankarray;
+            }
+            return response;
+        }
+        #endregion
+
         public static string xmlOrderFreeCreate(List<OrderFreeProduct> OrderFreeProductdtl)
         {
             string XML = "";
-            XML = "<OrderFree>";
             try
             {
 
-
+                XML = "<OrderFree>";
                 for (int i = 0; i < OrderFreeProductdtl.Count; i++)
                 {
 

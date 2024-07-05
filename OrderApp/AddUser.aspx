@@ -87,7 +87,7 @@
                             <label>User Name</label>
                         </div>
                         <div class="col-md-4">
-                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="20" ></asp:TextBox>
+                            <asp:TextBox ID="txtUserName" CssClass="form-control" runat="server" MaxLength="20"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="reqUserName" runat="server" ControlToValidate="txtUserName" ErrorMessage="Plese Enter User Name." ValidationGroup="RequireValidation"></asp:RequiredFieldValidator>
                         </div>
                         <div class="col-md-2">

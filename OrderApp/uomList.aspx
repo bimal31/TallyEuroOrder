@@ -12,8 +12,7 @@
                 <asp:Button ID="btnAdd" runat="server" Text="Add UOM" OnClick="btnAdd_Click" CssClass="btn btn-info btn-rounded" />
             </div>
         </div>
-        <%--<asp:TextBox ID="txtSearch" runat="server" />
-        <asp:Button Text="Search" runat="server" OnClick="Searchuom" />--%>
+       
         <center>
         <asp:Label ID="lblErrorMessage"  ForeColor="Red"   runat="server"></asp:Label>
          </center>

@@ -55,4 +55,19 @@ public class DA_tblDashboard : DALBase
             return false;
         }
     }
+
+    public bool GET_RECORDS_FOR_OrderHistoryReport(BA_tblDashboard objBA_tblDashboard, ref DataSet ds)
+    {
+        try
+        {
+            SqlParameter[] p = new SqlParameter[2];
+            p[0] = new SqlParameter("@FromDate", objBA_tblDashboard.FromDate);
+            p[1] = new SqlParameter("@ToDate", objBA_tblDashboard.ToDate);
+            return this.Get_RecordsDataset("sproc_SELECT_tblOrder_OrderHistoryReport", p, ref ds);
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+    }
 }

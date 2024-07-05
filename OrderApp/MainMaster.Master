@@ -10,38 +10,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-
     <!-- Favicon icon -->
     <%--  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">--%>
     <title>Euro 7000</title>
-
     <!-- Bootstrap Core CSS -->
     <link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-
-    <!-- chartist CSS -->
-    <%--<link href="../assets/plugins/chartist-js/dist/chartist.min.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-js/dist/chartist-init.css" rel="stylesheet">
-    <link href="../assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css" rel="stylesheet">--%>
-
     <!--This page css - Morris CSS -->
     <link href="../assets/plugins/c3-master/c3.min.css" rel="stylesheet" />
-
     <!-- Custom CSS -->
     <link href="lite/css/style.css" rel="stylesheet" />
     <link href="Style/ErrorMsg.css" rel="stylesheet" />
     <link rel="stylesheet" href="Style/Common.css" />
     <!-- You can change the theme colors from here -->
     <link href="lite/css/colors/blue.css" id="theme" rel="stylesheet" />
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" /></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
     <!-- Bootstrap Core CSS -->
     <link href="assets/plugins/bootstrap-multiselect/bootstrap-multiselect.css" rel="stylesheet" />
-
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -58,27 +41,18 @@
     <!-- Main wrapper - style you can find in pages.scss -->
     <!-- ============================================================== -->
     <div id="main-wrapper">
-
         <header class="topbar">
             <nav class="navbar top-navbar navbar-toggleable-sm navbar-light" style="background: #153170;">
-                <!-- ============================================================== -->
-                <!-- Logo -->
-                <!-- ============================================================== -->
                 <div class="navbar-header" style="background: #fff;">
                     <a class="navbar-brand" href="index.html">
                         <!-- Logo icon -->
                         <b>
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
-
                             <!-- Light Logo icon -->
                             <%--<img src="../assets/images/logo.png" alt="homepage" class="light-logo" />--%>
                         </b>
                         <!--End Logo icon -->
                         <!-- Logo text -->
-                        <span>
-
-                            <!-- Light Logo text -->
-                            <%--<img src="../assets/images/logo-light-text.png" class="light-logo" alt="homepage" /></span> </a>--%>
                 </div>
                 <!-- ============================================================== -->
                 <!-- End Logo -->
@@ -88,17 +62,7 @@
                     <!-- toggle and nav items -->
                     <!-- ============================================================== -->
                     <ul class="navbar-nav mr-auto mt-md-0">
-                        <!-- This is  -->
                         <li class="nav-item"><a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a></li>
-                        <!-- ============================================================== -->
-                        <!-- Search -->
-                        <!-- ============================================================== -->
-                        <%--<li class="nav-item hidden-sm-down search-box"><a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search & enter">
-                                <a class="srh-btn"><i class="ti-close"></i></a>
-                            </form>
-                        </li>--%>
                     </ul>
                     <!-- ============================================================== -->
                     <!-- User profile and search -->
@@ -111,7 +75,6 @@
                             <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="hdUserName" runat="server">
                                 <label id="lblUserName" runat="server"></label>
                             </a>
-                            <%--  <input type="button" id="btnLogOut" runat="server" value="LogOut" class="btn btn-success" onserverclick="btnLogOut_Click" />--%>
                         </li>
                     </ul>
                 </div>
@@ -130,23 +93,27 @@
                         </li>
                         <li id="liDealerOrderScheme" runat="server"><a class="waves-effect waves-" href="DealerOrderSchemeList.aspx" aria-expanded="false"><i class="mdi mdi-bank"></i><span class="hide-menu">Dealer Order Scheme</span></a>
                         </li>
+                        <li id="libatchlist" runat="server"><a class="waves-effect waves-dark" href="BatchList.aspx" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Batch</span></a>
+                        </li>
                         <li id="liDealer" runat="server"><a class="waves-effect waves-dark" href="DealerList.aspx" aria-expanded="false"><i class="mdi mdi-emoticon"></i><span class="hide-menu">Dealer</span></a>
                         </li>
 
-                         <li id="liUser" runat="server"><a class="waves-effect waves-dark" href="UserList.aspx" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">User</span></a>
+                        <li id="liDealerPayPending" runat="server"><a class="waves-effect waves-dark"
+                            href="DealerPayPending.aspx" aria-expanded="false"><i class="mdi mdi-account-plus"></i><span class="hide-menu">Dealer Payment</span></a>
+                        </li>
+                        <li id="liOrderReport" runat="server"><a class="waves-effect waves-dark" href="OrderReport.aspx" aria-expanded="false"><i class="fa fa-reorder"></i><span class="hide-menu">Order Report</span></a>
                         </li>
 
-                        <li id="liOrderReport" runat="server"><a class="waves-effect waves-dark" href="OrderReport.aspx" aria-expanded="false"><i class="fa fa-reorder"></i><span class="hide-menu">Order Report</span></a>
+                        <li id="liOrderReportHistory" runat="server"><a class="waves-effect waves-dark" href="OrderHistory.aspx" aria-expanded="false"><i class="mdi mdi-anchor"></i><span class="hide-menu">Order History</span></a>
+                        </li>
+
+                        <li id="liUser" runat="server"><a class="waves-effect waves-dark" href="UserList.aspx" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">User</span></a>
                         </li>
 
                         <li id="liProduct" runat="server"><a class="waves-effect waves-dark" href="ProductList.aspx" aria-expanded="false"><i class="mdi mdi-table"></i><span class="hide-menu">Product</span></a>
                         </li>
-                        
+
                         <li id="liProductPacking" runat="server"><a class="waves-effect waves-dark" href="ProductPacking.aspx" aria-expanded="false"><i class="mdi mdi-book-open-variant"></i><span class="hide-menu">Product Packing</span></a>
-                        </li>
-                        
-                        <li id="liDealerPayPending" runat="server"><a class="waves-effect waves-dark" 
-                            href="DealerPayPending.aspx" aria-expanded="false"><i class="mdi mdi-account-plus"></i><span class="hide-menu">Dealer Payment</span></a>
                         </li>
 
                         <li id="liScheme" runat="server"><a class="waves-effect waves-light" href="SchemeList.aspx" aria-expanded="false"><i class="mdi mdi-adjust"></i><span class="hide-menu">Scheme</span></a>
@@ -154,8 +121,8 @@
 
                         <li id="liuom" runat="server"><a class="waves-effect waves-dark" href="UOMList.aspx" aria-expanded="false"><i class="mdi mdi-unity"></i><span class="hide-menu">UOM</span></a>
                         </li>
-                      
-                        <li id  ="liCountry" runat="server"  style="display:none"><a class="waves-effect waves-dark" href="CountryList.aspx" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Country</span></a>
+
+                        <li id="liCountry" runat="server" style="display: none"><a class="waves-effect waves-dark" href="CountryList.aspx" aria-expanded="false"><i class="mdi mdi-account-card-details"></i><span class="hide-menu">Country</span></a>
                         </li>
                         <li id="liState" runat="server"><a class="waves-effect waves-dark" href="StateList.aspx" aria-expanded="false"><i class="mdi mdi-airplane"></i><span class="hide-menu">Territory</span></a>
                         </li>
@@ -167,11 +134,7 @@
                     </ul>
                 </nav>
             </div>
-            <%--  <div class="sidebar-footer">
-                <a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
-                <a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
-                <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
-            </div>--%>
+
         </aside>
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
@@ -192,27 +155,11 @@
                     </asp:ContentPlaceHolder>
                 </form>
             </div>
-            <!-- ============================================================== -->
-            <!-- End Container fluid  -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- footer -->
-            <!-- ============================================================== -->
-            <%--<footer class="footer">© 2017 Material Pro Admin by wrappixel.com </footer>--%>
-            <!-- ============================================================== -->
-            <!-- End footer -->
-            <!-- ============================================================== -->
+
         </div>
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
+
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
+
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <script src="Script/bootstrap-datepicker.js"></script>
     <script src="assets/plugins/bootstrap-multiselect/bootstrap-multiselect.js"></script>
@@ -231,13 +178,7 @@
     <script src="../assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <!--Custom JavaScript -->
     <script src="lite/js/custom.min.js"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!-- chartist chart -->
- <%--   <script src="assets/plugins/chartist-js/dist/chartist.min.js"></script>
-    <script src="assets/plugins/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js"></script>--%>
-    <!--c3 JavaScript -->
+
     <script src="../assets/plugins/d3/d3.min.js"></script>
     <script src="../assets/plugins/c3-master/c3.min.js"></script>
     <!-- Chart JS -->

@@ -47,7 +47,14 @@ namespace OrderApp
                             txtpincode.Text = Convert.ToString(dt.Rows[0]["Pincode"]);
                             txtGST.Text = Convert.ToString(dt.Rows[0]["GST"]);
                             txtPhoneNo.Text = Convert.ToString(dt.Rows[0]["Phone"]);
-                            drpStateName.SelectedValue = Convert.ToInt32(dt.Rows[0]["StateID"]).ToString();
+                            if (Convert.ToString(dt.Rows[0]["StateID"]) == "")
+                            {
+                                drpStateName.SelectedValue = "0";
+                            }
+                            else {
+                                drpStateName.SelectedValue = Convert.ToInt32(dt.Rows[0]["StateID"]).ToString();
+                            }
+                            
                             hdnGSTPhoto.Value = Convert.ToString(dt.Rows[0]["GSTPhoto"]);
                             hdnVisitCard.Value = Convert.ToString(dt.Rows[0]["VisitCard"]);
 

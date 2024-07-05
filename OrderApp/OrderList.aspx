@@ -51,13 +51,15 @@
                         OnRowDataBound="grdOrder_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="OrdSrNo" HeaderText="Order Sr No" />
-                            <asp:BoundField DataField="OrderID" HeaderText="Order Id" />
                             <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                             <asp:BoundField DataField="OrderDate" HeaderText="Order Date"  />
                             <asp:BoundField DataField="DealerName" HeaderText="Dealer Name" />
                                 <asp:BoundField DataField="Area" HeaderText="Area" />
                             <asp:BoundField DataField="TotalKgGm" HeaderText="Total Kg" />
-                          
+                             <%--<asp:BoundField DataField="OrderStatus" HeaderText="Order Status" />--%>
+                           <%-- <asp:BoundField DataField="Other" HeaderText="Other" />
+                            <asp:BoundField DataField="POP" HeaderText="POP" />
+                            <asp:BoundField DataField="Transport" HeaderText="Transport" />--%>
                             <asp:TemplateField HeaderText="View">
                                 <ItemTemplate>
                                     <asp:Button ID="btnView" runat="server" Text="View" CssClass="btn btn-info pull-right" CommandName="ViewValue" CommandArgument='<%# Eval("OrderID") + "|" + Eval("OrderType") + "|" + Eval("ParentOrderId") %>' />
@@ -81,10 +83,18 @@
                                     <asp:Button ID="btnEdit" runat="server" Text="Edit" CssClass="btn btn-success pull-right" CommandName="EditValue" CommandArgument='<%# Eval("OrderID") + "|" + Eval("OrderType") %>' />
                                 </ItemTemplate>
                             </asp:TemplateField>
+                            <%--<asp:TemplateField HeaderText="Delete">
+                                <ItemTemplate>
+                                    <asp:Button ID="btnDelete" runat="server" Text="Delete" CssClass="btn btn-warning pull-right" CommandName="DeleteValue" CommandArgument='<%# Eval("OrderID") %>' />
+                                </ItemTemplate>
+                            </asp:TemplateField>--%>
                             <asp:TemplateField ItemStyle-Width="15%">
                                 <ItemTemplate>
                                     <asp:DropDownList ID="drpOrderStatus" runat="server" CssClass="form-control" OnSelectedIndexChanged="drpOrderStatus_SelectedIndexChanged" AutoPostBack="true">
-                                     
+                                       <%-- <asp:ListItem Text="Pending" Value="Pending"></asp:ListItem>
+                                        <asp:ListItem Text="Cancel" Value="Cancel"></asp:ListItem>
+                                        <asp:ListItem Text="Factory" Value="Factory"></asp:ListItem>--%>
+                                        <%--<asp:ListItem Text="Dispatch" Value="Dispatch"></asp:ListItem>--%>
                                     </asp:DropDownList>
                                     <asp:HiddenField ID="hdOrderListId" runat="server" Value='<%# Eval("OrderID") %>' />
                                     <asp:HiddenField ID="hdOrderStatus" runat="server" Value='<%# Eval("OrderStatus") %>' />

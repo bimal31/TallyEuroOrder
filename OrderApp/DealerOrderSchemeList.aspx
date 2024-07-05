@@ -52,7 +52,6 @@
                         OnRowDataBound="grdOrder_RowDataBound">
                         <Columns>
                             <asp:BoundField DataField="OrdSrNo" HeaderText="Order Sr No" />
-                            <asp:BoundField DataField="OrderID" HeaderText="Order Id" />
                               <asp:BoundField DataField="OrderType" HeaderText="Order Type" />
                             <asp:BoundField DataField="OrderDate" HeaderText="Order Date"  />
                             <asp:BoundField DataField="DealerName" HeaderText="Dealer Name" />

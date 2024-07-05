@@ -84,4 +84,24 @@ public class BA_tblDashboard
             return false;
         }
     }
+
+
+    public bool GET_RECORDS_FOR_OrderHistoryReport(ref DataSet ds)
+    {
+        try
+        {
+            if (objDA_tblDashboard.GET_RECORDS_FOR_OrderHistoryReport(this, ref ds))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+    }
 }

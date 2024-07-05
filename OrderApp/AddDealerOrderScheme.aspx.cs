@@ -94,7 +94,9 @@ namespace OrderApp
             }
 
         }
-        
+
+      
+
         protected void txtDealerCodeSearch_TextChanged(object sender, EventArgs e)
         {
             try
@@ -180,7 +182,11 @@ namespace OrderApp
                 return false;
             }
         }
+
         
+
+      
+
         public decimal Caltotal(decimal totalkg, string PackingType, int ProductQty)
         {
             decimal totalkgcount = 0;
@@ -249,6 +255,8 @@ namespace OrderApp
             }
         }
 
+       
+
         protected void GetOrderDetails(Int32 OrderId)
         {
             try
@@ -313,6 +321,7 @@ namespace OrderApp
         }
 
 
+       
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string GetProcustlist()

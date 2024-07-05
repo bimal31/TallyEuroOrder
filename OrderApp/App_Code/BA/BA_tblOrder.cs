@@ -739,4 +739,23 @@ public class BA_tblOrder
     //  objBA_tblOrder.UpdateBy = "";
     //  objBA_tblOrder.UpdateDate = "";
 
+
+    public bool SELECT_ALL_tblOrder_orderstatus_Factory(ref DataTable dt)
+    {
+        try
+        {
+            if (objDA_tblOrder.SELECT_ALL_tblOrder_orderstatus_Factory(this, ref dt))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        catch (Exception ex)
+        {
+            return false;
+        }
+    }
 }
